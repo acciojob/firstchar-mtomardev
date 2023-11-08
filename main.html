@@ -8,7 +8,28 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
+    <input id="str" placeholder="Enter string">
+	<p id="output"></p>
+	<script>
+		let input = document.getElementById('str');
+		let output = document.getElementById('output')
+
+		input.addEventListener('input', function(){
+			let inputstring = input.value;
+			let result = firstChar(inputstring);
+			output.textContent = result;
+		});
+
+		function firstChar(inputstring){
+			for(let i=0; i<inputstring.length; i++){
+				if(inputstring !== ' '){
+					return inputstring[i];
+				}
+				else{
+					return '';
+				}
+			}
+		}
 </script>
 
 </body>
